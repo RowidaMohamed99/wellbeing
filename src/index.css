@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@import '@fontsource/tajawal/index.css';
+
+body {
+  font-family: tajawal;
+}
