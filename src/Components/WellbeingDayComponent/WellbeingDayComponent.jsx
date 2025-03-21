@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next'; // Import useTranslation
 import bg from "../../assets/images/dr.png"; // Ensure this path is correct
 
 const WellbeingDayComponent = () => {
+  const { t } = useTranslation(); // Use the translation hook
   const [activeDot, setActiveDot] = useState(0);
 
-  // Dot texts relative to the first dot text
+  // Translated dot texts
   const dotTexts = [
-    "This platform and this application are a true achievement, as we have made the most of technology to serve humanity. We have transferred the clinic's work as it is to the application, with its components and more.",
-    "Our virtual consultations allow you to connect with licensed professionals anytime, anywhere, ensuring accessibility and convenience.",
-    "Through personalized wellness plans, we empower you to take control of your mental health journey with tailored support.",
-    "Join our community of users who are actively improving their wellbeing through innovative digital solutions."
+    t("wellbeingDayDescription1"),
+    t("wellbeingDayDescription2"),
+    t("wellbeingDayDescription3"),
+    t("wellbeingDayDescription4"),
   ];
 
   // Auto-transition logic
@@ -24,7 +26,7 @@ const WellbeingDayComponent = () => {
 
   return (
     <div className="w-full h-auto pb-10">
-    {/* Hero Section */}
+      {/* Hero Section */}
       <div
         className="relative flex items-center h-[77vh] bg-cover bg-center"
         style={{
@@ -42,12 +44,12 @@ const WellbeingDayComponent = () => {
         >
           {/* Title */}
           <h1 className="text-4xl sm:text-6xl font-bold text-[#19649E] mb-4 animate-fade-in">
-            Wellbeing Day
+            {t("wellbeingDayTitle2")} {/* Translated title */}
           </h1>
 
           {/* Description */}
           <p className="text-gray-600 font-medium text-base sm:text-xl mb-6 animate-slide-in">
-            {dotTexts[activeDot]}
+            {dotTexts[activeDot]} {/* Translated description */}
           </p>
 
           {/* Slider Dots */}
@@ -66,7 +68,7 @@ const WellbeingDayComponent = () => {
           {/* Button */}
           <Link to="/about">
             <button className="bg-[#19649E] cursor-pointer text-white px-4 sm:px-6 py-2 rounded transition-all duration-300 hover:bg-[#4e738f] hover:scale-105 animate-bounce-in">
-              Read More
+              {t("readMore")} {/* Translated button text */}
             </button>
           </Link>
         </div>

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom'; // Import Link for navigation
+import { useTranslation } from 'react-i18next'; // Import useTranslation hook
 import avatar from '../../assets/images/person.jpg';
 
 export default function MeetExperts({ showOnlyFirstFour }) {
+  const { t } = useTranslation(); // Initialize translation hook
   const [experts, setExperts] = useState([]); // State to store fetched experts
   const [loading, setLoading] = useState(true); // State to handle loading
   const [error, setError] = useState(null); // State to handle errors
@@ -28,11 +30,11 @@ export default function MeetExperts({ showOnlyFirstFour }) {
   }, []);
 
   if (loading) {
-    return <p className="text-center text-[#19649E]">Loading experts...</p>;
+    return <p className="text-center text-[#19649E]">{t('loadingExperts')}</p>;
   }
 
   if (error) {
-    return <p className="text-center text-red-500">Error: {error}</p>;
+    return <p className="text-center text-red-500">{t('errorLoadingExperts', { error })}</p>;
   }
 
   // Limit experts to the first 4 if showOnlyFirstFour is true
@@ -44,10 +46,10 @@ export default function MeetExperts({ showOnlyFirstFour }) {
         {/* Header */}
         <header>
           <h1 className="font-bold text-[36px] sm:text-[40px] leading-[100%] tracking-[0%] text-center text-[#19649E]">
-            Meet our qualified experts
+            {t('meetExpertsTitle')}
           </h1>
           <p className="font-bold p-4 text-[18px] sm:text-[25px] leading-[100%] tracking-[0%] text-center text-[#616161]">
-            Over 50 Arabic and English-speaking experts with therapy and counseling expertise
+            {t('meetExpertsSubtitle')}
           </p>
         </header>
 
@@ -82,7 +84,7 @@ export default function MeetExperts({ showOnlyFirstFour }) {
                 to="/team"
                 className="bg-[#19649E] text-white px-6 py-2 rounded hover:bg-[#4e738f] transition duration-300"
               >
-                See More Experts
+                {t('seeMoreExperts')}
               </Link>
             </div>
           )}
