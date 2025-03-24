@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaYoutube, FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
+import { FaYoutube, FaInstagram, FaFacebook, FaEnvelope } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next"; // Import useTranslation
 import Logo from "../../assets/images/logo.png";
@@ -25,6 +25,26 @@ const HeaderComponent = () => {
     }
   };
 
+  // Social Media Links
+  const socialMediaLinks = [
+    {
+      icon: <FaFacebook key="facebook" />,
+      url: "https://www.facebook.com/share/1Ajitu1uMz/",
+    },
+    {
+      icon: <FaYoutube key="youtube" />,
+      url: "https://youtube.com/@wellbeing.day.therapy?si=D3dSNiXHGMi8hbbx",
+    },
+    {
+      icon: <FaInstagram key="instagram" />,
+      url: "https://www.instagram.com/wellbeingallday?igsh=YWQxOGoyZXc5NWhz",
+    },
+    {
+      icon: <FaEnvelope key="gmail" />,
+      url: "mailto:wellbeingallday@gmail.com" // Replace "#" with your Twitter link if available
+    },
+  ];
+
   return (
     <>
       {/* Top Navbar */}
@@ -32,18 +52,16 @@ const HeaderComponent = () => {
         <div className="container mx-auto flex items-center justify-between px-4 py-2">
           {/* Left Side - Social Icons */}
           <div className="flex items-center gap-2 sm:gap-4">
-            {[
-              <FaYoutube key="youtube" />,
-              <FaTwitter key="twitter" />,
-              <FaInstagram key="instagram" />,
-              <FaFacebook key="facebook" />,
-            ].map((Icon, index) => (
-              <div
+            {socialMediaLinks.map(({ icon, url }, index) => (
+              <a
                 key={index}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="cursor-pointer bg-white p-1 sm:p-2 rounded-full text-[#19649E] hover:bg-gray-200 transition duration-300"
               >
-                {Icon}
-              </div>
+                {icon}
+              </a>
             ))}
           </div>
 

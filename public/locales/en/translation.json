@@ -2,7 +2,7 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
-    "team": "Team",
+    "team": "Specialists",
     "language": "Language",
     "english": "English",
     "arabic": "العربية",
@@ -105,5 +105,13 @@
         "trauma": "Trauma Disorder"
       },
       "comingSoon": "Coming Soon!"
-    }
+      
+    },
+    "discoverPower": "Transform Your Life with Wellbeing Day",
+    "confidentialityTitle": "Complete Confidentiality and Privacy",
+    "confidentialityDescription": "We protect your information and secrets by ensuring our specialists adhere to strict confidentiality as per our clear terms and the relevant professional association's laws. We maintain your privacy through a controlled session framework and by not disclosing your information to anyone.",
+    "specialistsTitle": "Distinguished Specialists",
+    "specialistsDescription": "We provide you with a diverse group of specialists who are licensed to practice or are members of professional associations. They have expertise in their field and are committed to ethical, professional, and legal standards.",
+    "lowestCostTitle": "Lowest Cost for the Best Service",
+    "lowestCostDescription": "We ensure that the services we provide are of the highest possible level, at the lowest possible cost relative to the quality of the service."
   }

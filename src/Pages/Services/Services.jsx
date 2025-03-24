@@ -99,7 +99,7 @@ const Services = () => {
 
   return (
     <div>
-      <WellbeingDayComponent />
+      {/*<WellbeingDayComponent />*/}
 
       <div className="p-8">
         {/* Navbar Links */}

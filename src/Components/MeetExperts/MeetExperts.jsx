@@ -13,7 +13,7 @@ export default function MeetExperts({ showOnlyFirstFour }) {
   useEffect(() => {
     const fetchExperts = async () => {
       try {
-        const response = await fetch('https://scopey.onrender.com/api/specialist/getAll');
+        const response = await fetch('https://wellbeingproject.onrender.com/api/specialist/getAll');
         if (!response.ok) {
           throw new Error('Failed to fetch data');
         }

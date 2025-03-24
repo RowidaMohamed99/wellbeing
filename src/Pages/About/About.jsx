@@ -6,7 +6,7 @@ import AboutInfo from '../../Components/AboutInfo/AboutInfo'
 const About = () => {
   return (
     <>
-      <WellbeingDayComponent />
+      <WellbeingDayComponent hideHero={true} />      
       <AboutInfo/>
       <WellbeindDay showHeader={false} />
     </>
