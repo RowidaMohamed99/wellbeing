@@ -113,5 +113,19 @@
     "specialistsTitle": "Distinguished Specialists",
     "specialistsDescription": "We provide you with a diverse group of specialists who are licensed to practice or are members of professional associations. They have expertise in their field and are committed to ethical, professional, and legal standards.",
     "lowestCostTitle": "Lowest Cost for the Best Service",
-    "lowestCostDescription": "We ensure that the services we provide are of the highest possible level, at the lowest possible cost relative to the quality of the service."
+    "lowestCostDescription": "We ensure that the services we provide are of the highest possible level, at the lowest possible cost relative to the quality of the service.",
+    "privacyPolicyTitle": "Privacy Policy",
+    "policyLastUpdated": "Last updated: January 2023",
+    "policyFetchError": "Failed to load privacy policy. Please try again later.",
+    "loading": "Loading...",
+    "policySections": {
+      "GENERAL_INSTRUCTIONS": "General Instructions",
+      "SPECIALIST_RECOMMENDATIONS": "Specialist Recommendations",
+      "SESSION_BOOKING": "Session Booking",
+      "ONLINE_CONSULTATION": "Online Consultation",
+      "SESSION_COST": "Session Cost",
+      "HANDLING_PERSONAL_INFO": "Handling Personal Information",
+      "COMMON_QUESTIONS": "Common Questions"
+    }
+
   }
